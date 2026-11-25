@@ -81,6 +81,19 @@ class Room:
     def Rearrangement(self, dx=0, dy=0):
         for item in self.__items:
             x, y = item.coords
+    @print_call
+    def add_item(self, item):
+        self.__items.append(item)
+
+    @print_call
+    def remove_item(self, item):
+        if item in self.__items:
+            self.__items.remove(item)
+
+    @print_call
+    def Rearrangement(self, dx=0, dy=0):
+        for item in self.__items:
+            x, y = item.coords
             item.coords = [x + dx, y + dy]
 
     def __str__(self):
