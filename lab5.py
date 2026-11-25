@@ -3,6 +3,11 @@ def my_decorator(func):
         print(f"[my_decorator] Викликано метод: {func.__name__}")
         result = func(*args, **kwargs)
         return result
+def print_call(func):
+    def wrapper(*args, **kwargs):
+        print(f"[print_call] Викликано метод: {func.__name__}")
+        result = func(*args, **kwargs)
+        return result
     return wrapper
 
 
