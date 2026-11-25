@@ -12,6 +12,8 @@ class Furniture:
         self.__coords = list(coords) if coords else [0, 0]
 
     def get_name(self):
+    @property
+    def name(self):
         return self.__name
 
     def get_coords(self):
