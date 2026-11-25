@@ -10,19 +10,14 @@ def print_call(func):
         return result
     return wrapper
 
-
 class Furniture:
     def __init__(self, name="Річ", coords=None):
         self.__name = name
         self.__coords = list(coords) if coords else [0, 0]
 
-    def get_name(self):
     @property
     def name(self):
         return self.__name
-
-    def get_coords(self):
-        return self.__coords
 
     def set_coords(self, coords):
         self.__coords = list(coords)
